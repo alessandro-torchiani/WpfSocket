@@ -34,6 +34,7 @@ namespace WPF_Socket
         {
             InitializeComponent();
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+            socket.EnableBroadcast = true; //abilitiamo broadcast
             //address family è un enumerativo che permette di specificare le modalità di lavoro (lavoreremo con indirizzi ipv4)
             //socket type è un enumerativo che permette di usare il protocollo UDP
             //protocol type permette di specificare il protocollo, noi usiamo UDP (senza connessione)
@@ -79,6 +80,14 @@ namespace WPF_Socket
             byte[] messaggio = Encoding.UTF8.GetBytes(txtMessaggio.Text);  //creo vettore di byte che conterrà il messaggio che verrà codificato in UTF8
             socket.SendTo(messaggio, remote_endpoint); //metodo che invia il messaggio dal socket
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            IPAddress remote_address2 = IPAddress.Parse("255.255.255.255.255"); //USO QUESTO INDIRIZZO DI BROADCAST PER POTER COMUNICARE CON TUTTA LA SUBNET LOCALE
+            IPEndPoint remote_endpoint2 = new IPEndPoint(remote_address2, int.Parse(txtPorta2.Text));  
+            byte[] messaggio = Encoding.UTF8.GetBytes(txtMessaggio2.Text);  //creo vettore di byte che conterrà il messaggio che verrà codificato in UTF8
+            socket.SendTo(messaggio, remote_endpoint2);
         }
     }
 }

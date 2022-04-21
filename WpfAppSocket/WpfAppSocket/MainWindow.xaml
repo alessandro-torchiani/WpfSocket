@@ -13,8 +13,13 @@
         <TextBox x:Name="txtIP" HorizontalAlignment="Left" Margin="538,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="26"/>
         <TextBox x:Name="txtPorta" HorizontalAlignment="Left" Margin="538,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="29"/>
         <TextBox x:Name="txtMessaggio" HorizontalAlignment="Left" Margin="538,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="27"/>
-        <ListBox x:Name="lstBox" Margin="89,41,427,42"/>
+        <ListBox x:Name="lstBox" Margin="22,41,494.6,42"/>
         <Button x:Name="btnInvia" Content="INVIA" HorizontalAlignment="Left" Margin="575,335,0,0" VerticalAlignment="Top" Width="76" Height="39" Click="btnInvia_Click"/>
+        <Button Content="INVIA MESSAGGIO DI BROADCAST" HorizontalAlignment="Left" Margin="323,309,0,0" VerticalAlignment="Top" Width="197" Height="41" Click="Button_Click"/>
+        <Label Content="Inserire numero porta:" HorizontalAlignment="Left" Margin="348,134,0,0" VerticalAlignment="Top" Width="139"/>
+        <TextBox x:Name="txtPorta2" HorizontalAlignment="Left" Margin="347,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="29"/>
+        <Label Content="Inserire messaggio:" HorizontalAlignment="Left" Margin="347,226,0,0" VerticalAlignment="Top" Width="139"/>
+        <TextBox x:Name="txtMessaggio2" HorizontalAlignment="Left" Margin="347,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="27"/>
 
     </Grid>
 </Window>

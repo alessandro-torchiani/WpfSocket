@@ -1,0 +1,20 @@
+﻿<Window x:Class="WPF_Socket.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Socket"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Inserire indirizzo IP:" HorizontalAlignment="Left" Margin="538,41,0,0" VerticalAlignment="Top" Width="154"/>
+        <Label Content="Inserire numero porta:" HorizontalAlignment="Left" Margin="538,134,0,0" VerticalAlignment="Top" Width="139"/>
+        <Label Content="Inserire messaggio:" HorizontalAlignment="Left" Margin="538,238,0,0" VerticalAlignment="Top" Width="139"/>
+        <TextBox x:Name="txtIP" HorizontalAlignment="Left" Margin="538,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="26"/>
+        <TextBox x:Name="txtPorta" HorizontalAlignment="Left" Margin="538,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="29"/>
+        <TextBox x:Name="txtMessaggio" HorizontalAlignment="Left" Margin="538,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="139" Height="27"/>
+        <ListBox x:Name="lstBox" Margin="89,41,427,42"/>
+        <Button x:Name="btnInvia" Content="INVIA" HorizontalAlignment="Left" Margin="575,335,0,0" VerticalAlignment="Top" Width="76" Height="39" Click="btnInvia_Click"/>
+
+    </Grid>
+</Window>
